@@ -276,29 +276,32 @@ An attacker can exploit this vulnerability to execute arbitrary JavaScript in th
               </div>
 
               {/* Header Actions */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 {generatedReport && (
                   <>
                     <button
                       onClick={handleDownloadPDF}
-                      className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                      className="flex items-center gap-1 sm:gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 sm:px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                      title="Unduh PDF"
                     >
                       <DownloadIcon className="h-3.5 w-3.5 text-[#FF7527]" />
-                      <span>Unduh PDF</span>
+                      <span className="hidden sm:inline">Unduh PDF</span>
+                      <span className="inline sm:hidden">PDF</span>
                     </button>
                     <button
                       onClick={handleCopy}
-                      className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                      className="flex items-center gap-1 sm:gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 sm:px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                      title="Copy report to clipboard"
                     >
                       {copied ? (
                         <>
                           <CheckIcon className="h-3.5 w-3.5 text-green-500" />
-                          <span>Copied!</span>
+                          <span className="hidden sm:inline">Copied!</span>
                         </>
                       ) : (
                         <>
                           <CopyIcon className="h-3.5 w-3.5" />
-                          <span>Copy</span>
+                          <span className="hidden sm:inline">Copy</span>
                         </>
                       )}
                     </button>
@@ -306,11 +309,11 @@ An attacker can exploit this vulnerability to execute arbitrary JavaScript in th
                 )}
                 <button
                   onClick={handleReset}
-                  className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-400 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                  className="flex items-center gap-1 sm:gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 sm:px-3 py-1.5 text-xs font-medium text-zinc-400 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
                   title="Reset form"
                 >
                   <RefreshCwIcon className="h-3.5 w-3.5" />
-                  <span>Reset</span>
+                  <span className="hidden sm:inline">Reset</span>
                 </button>
               </div>
             </div>
