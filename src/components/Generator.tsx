@@ -8,7 +8,9 @@ import {
   CheckIcon,
   ZapIcon,
   RefreshCwIcon,
+  DownloadIcon,
 } from "./Icons";
+import { exportReportToPDF } from "@/utils/pdfGenerator";
 
 export function Generator() {
   const [title, setTitle] = useState("");
@@ -91,6 +93,11 @@ An attacker can exploit this vulnerability to execute arbitrary JavaScript in th
     navigator.clipboard.writeText(generatedReport);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleDownloadPDF = () => {
+    if (!generatedReport) return;
+    exportReportToPDF(generatedReport);
   };
 
   const handleReset = () => {
@@ -271,22 +278,31 @@ An attacker can exploit this vulnerability to execute arbitrary JavaScript in th
               {/* Header Actions */}
               <div className="flex items-center gap-3">
                 {generatedReport && (
-                  <button
-                    onClick={handleCopy}
-                    className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 transition-colors focus:outline-none"
-                  >
-                    {copied ? (
-                      <>
-                        <CheckIcon className="h-3.5 w-3.5 text-green-500" />
-                        <span>Copied!</span>
-                      </>
-                    ) : (
-                      <>
-                        <CopyIcon className="h-3.5 w-3.5" />
-                        <span>Copy</span>
-                      </>
-                    )}
-                  </button>
+                  <>
+                    <button
+                      onClick={handleDownloadPDF}
+                      className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                    >
+                      <DownloadIcon className="h-3.5 w-3.5 text-[#FF7527]" />
+                      <span>Unduh PDF</span>
+                    </button>
+                    <button
+                      onClick={handleCopy}
+                      className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors focus:outline-none"
+                    >
+                      {copied ? (
+                        <>
+                          <CheckIcon className="h-3.5 w-3.5 text-green-500" />
+                          <span>Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <CopyIcon className="h-3.5 w-3.5" />
+                          <span>Copy</span>
+                        </>
+                      )}
+                    </button>
+                  </>
                 )}
                 <button
                   onClick={handleReset}
