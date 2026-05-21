@@ -319,7 +319,9 @@ An attacker can exploit this vulnerability to execute arbitrary JavaScript in th
             </div>
 
             {/* Window Content */}
-            <div className="p-6 sm:p-8 min-h-[500px] flex flex-col justify-center items-center font-mono text-sm leading-relaxed text-zinc-300 overflow-x-auto">
+            <div className={`p-6 sm:p-8 min-h-[500px] flex flex-col font-mono text-sm leading-relaxed text-zinc-300 ${
+              !generatedReport ? "justify-center items-center" : "justify-start items-stretch"
+            }`}>
               {isGenerating ? (
                 <div className="flex flex-col items-center justify-center text-center p-8">
                   <Loader2Icon className="h-10 w-10 text-[#FF7527] mb-4 animate-spin" />
@@ -327,10 +329,13 @@ An attacker can exploit this vulnerability to execute arbitrary JavaScript in th
                     AI is analyzing the vulnerability & drafting the report...
                   </p>
                 </div>
-              ) : generatedReport ? (
-                <div className="w-full h-full justify-start items-start text-left space-y-4 whitespace-pre-wrap">
-                  {generatedReport}
-                </div>
+              ) : generatedReport !== null ? (
+                <textarea
+                  value={generatedReport}
+                  onChange={(e) => setGeneratedReport(e.target.value)}
+                  className="w-full min-h-[460px] bg-transparent text-zinc-300 font-mono text-sm leading-relaxed border-none outline-none focus:outline-none focus:ring-0 resize-none p-0"
+                  spellCheck={false}
+                />
               ) : (
                 <div className="flex flex-col items-center justify-center text-center p-8">
                   <FileTextIcon className="h-12 w-12 text-zinc-700 mb-4" />
