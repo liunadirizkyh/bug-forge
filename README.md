@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BugForge
+AI-powered bug bounty report generator to convert raw notes into professional, submission-ready reports in seconds.
 
-## Getting Started
+## Tech Stack
+- **React 19 & Next.js 16 (App Router)** (Frontend Framework)
+- **Tailwind CSS** (Styling & Layout)
+- **TypeScript** (Static Typing)
+- **jsPDF** (Client-side PDF Generation & Export)
 
-First, run the development server:
+## Fitur
+- ⚡ **Instant AI report generation**: Mengubah catatan kasar, payload, dan log reproduksi menjadi laporan kerentanan yang terstruktur secara otomatis.
+- 📝 **Live Preview & Direct Editing**: Edit hasil laporan markdown langsung pada editor pratinjau sebelum menyalin atau mengunduh hasil.
+- 📋 **One-click Clipboard Copy**: Salin laporan dalam format markdown dengan satu klik untuk disubmit ke platform bug bounty.
+- 📄 **Clean PDF Export**: Ekspor laporan langsung menjadi dokumen PDF A4 dengan layout profesional, blok kode monospace, dan lencana tingkat keparahan (*severity badge*).
+- 📱 **Fully Responsive Layout**: Antarmuka bertema gelap premium yang responsif dan nyaman digunakan di HP, tablet, maupun desktop.
+- 🚀 **Interactive Samples**: Pengisian contoh laporan instan untuk menguji alur generator dengan sekali klik.
+
+## Menu & Hak Akses
+| Menu / Halaman | Deskripsi | Fitur yang Tersedia |
+| :--- | :--- | :--- |
+| `Home` | Landing page utama yang memuat deskripsi, cara kerja, dan navigasi utama. | Navigasi ke workspace generator |
+| `Generator` | Workspace utama yang terbagi menjadi formulir input (kiri) dan editor pratinjau (kanan). | Input form, Load Contoh Catatan, AI Generation, Live Edit, Copy Markdown, Unduh PDF |
+
+## Instalasi
 
 ```bash
+# Clone & install dependensi
+git clone https://github.com/username/bugforge.git
+cd bugforge
+npm install
+
+# Jalankan server lokal untuk pengembangan
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build aplikasi untuk tahap produksi
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Environment Variables (.env)
+Karena seluruh pemrosesan dan generator berjalan di sisi klien (*client-side*), tidak diperlukan konfigurasi database eksternal. Anda cukup menggunakan port bawaan Next.js:
+```env
+PORT=3000
+NODE_ENV=development
+```
