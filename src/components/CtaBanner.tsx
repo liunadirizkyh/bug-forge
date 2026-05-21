@@ -13,15 +13,15 @@ export function CtaBanner({ setActiveTab }: CtaBannerProps) {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#FF7527]/10 rounded-full blur-3xl pointer-events-none" />
 
         <h2 className="relative text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-8 leading-[1.2]">
-          Hunter sejati menghabiskan waktu untuk <br className="hidden sm:block" />
-          <span className="text-[#FF7527] bg-clip-text">recon</span>, bukan typing.
+          True hunters spend time on <br className="hidden sm:block" />
+          <span className="text-[#FF7527] bg-clip-text">recon</span>, not typing.
         </h2>
 
         <button
           onClick={() => setActiveTab("generator")}
           className="relative inline-flex items-center justify-center gap-2 rounded-xl bg-[#FF7527] px-8 py-4 text-base font-bold text-[#0B0B0D] shadow-xl shadow-[#FF7527]/20 transition-all hover:bg-[#e06522] hover:shadow-[#FF7527]/30 active:scale-95 focus:outline-none"
         >
-          Coba sekarang — gratis
+          Try now — it's free
           <ArrowRightIcon className="h-5 w-5" />
         </button>
       </div>

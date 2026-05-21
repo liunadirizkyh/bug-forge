@@ -17,19 +17,19 @@ export function Hero({ setActiveTab }: HeroProps) {
         <div className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-1.5 mb-8 shadow-inner backdrop-blur-sm">
           <SparklesIcon className="h-4 w-4 text-[#FF7527]" />
           <span className="text-xs font-medium text-zinc-300">
-            Powered by AI · gratis untuk dipakai
+            Powered by AI · free to use
           </span>
         </div>
 
         {/* Main Title */}
         <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
-          Stop nulis laporan. <br />
-          <span className="text-[#FF7527] bg-clip-text">Mulai buru bug.</span>
+          Stop writing reports. <br />
+          <span className="text-[#FF7527] bg-clip-text">Start hunting bugs.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="mx-auto max-w-3xl text-lg sm:text-xl text-zinc-400 mb-10 leading-relaxed font-normal">
-          BugForge mengubah catatan kasar Anda — steps, payload, screenshot mental — menjadi laporan bug bounty profesional siap-submit dalam hitungan detik.
+          BugForge transforms your rough notes — steps, payloads, mental screenshots — into professional, submission-ready bug bounty reports in seconds.
         </p>
 
         {/* CTA Buttons */}
@@ -38,14 +38,14 @@ export function Hero({ setActiveTab }: HeroProps) {
             onClick={() => setActiveTab("generator")}
             className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-[#FF7527] px-8 py-4 text-base font-bold text-[#0B0B0D] shadow-xl shadow-[#FF7527]/20 transition-all hover:bg-[#e06522] hover:shadow-[#FF7527]/30 active:scale-95 focus:outline-none"
           >
-            Generate laporan pertamamu
+            Generate your first report
             <ArrowRightIcon className="h-5 w-5" />
           </button>
           <a
             href="#features"
             className="w-full sm:w-auto flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/80 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-zinc-800/80 active:scale-95 focus:outline-none"
           >
-            Lihat cara kerja
+            See how it works
           </a>
         </div>
 

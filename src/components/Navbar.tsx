@@ -37,7 +37,7 @@ export function Navbar({ activeTab, setActiveTab }: NavbarProps) {
             onClick={() => setActiveTab("generator")}
             className="flex items-center justify-center rounded-xl bg-[#FF7527] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-[#0B0B0D] shadow-lg shadow-[#FF7527]/20 transition-all hover:bg-[#e06522] hover:shadow-[#FF7527]/30 active:scale-95 focus:outline-none"
           >
-            <span className="hidden sm:inline">Buka&nbsp;</span>Generator
+            <span className="hidden sm:inline">Open&nbsp;</span>Generator
           </button>
         </nav>
       </div>
