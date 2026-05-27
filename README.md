@@ -1,44 +1,58 @@
-# BugForge
-AI-powered bug bounty report generator to convert raw notes into professional, submission-ready reports in seconds.
+# 📄 BugForge
 
-## Tech Stack
-- **React 19 & Next.js 16 (App Router)** (Frontend Framework)
-- **Tailwind CSS** (Styling & Layout)
-- **TypeScript** (Static Typing)
-- **jsPDF** (Client-side PDF Generation & Export)
+BugForge is a modern, responsive AI-powered bug bounty report generator built with **Next.js** and **React**. It empowers security researchers and bug hunters to instantly convert raw notes, payloads, and reproduction steps into professional, submission-ready vulnerability reports.
 
-## Fitur
-- ⚡ **Instant AI report generation**: Mengubah catatan kasar, payload, dan log reproduksi menjadi laporan kerentanan yang terstruktur secara otomatis.
-- 📝 **Live Preview & Direct Editing**: Edit hasil laporan markdown langsung pada editor pratinjau sebelum menyalin atau mengunduh hasil.
-- 📋 **One-click Clipboard Copy**: Salin laporan dalam format markdown dengan satu klik untuk disubmit ke platform bug bounty.
-- 📄 **Clean PDF Export**: Ekspor laporan langsung menjadi dokumen PDF A4 dengan layout profesional, blok kode monospace, dan lencana tingkat keparahan (*severity badge*).
-- 📱 **Fully Responsive Layout**: Antarmuka bertema gelap premium yang responsif dan nyaman digunakan di HP, tablet, maupun desktop.
-- 🚀 **Interactive Samples**: Pengisian contoh laporan instan untuk menguji alur generator dengan sekali klik.
+## ✨ Key Features
 
-## Menu & Hak Akses
-| Menu / Halaman | Deskripsi | Fitur yang Tersedia |
-| :--- | :--- | :--- |
-| `Home` | Landing page utama yang memuat deskripsi, cara kerja, dan navigasi utama. | Navigasi ke workspace generator |
-| `Generator` | Workspace utama yang terbagi menjadi formulir input (kiri) dan editor pratinjau (kanan). | Input form, Load Contoh Catatan, AI Generation, Live Edit, Copy Markdown, Unduh PDF |
+- **Instant AI Generation**: Automatically transform raw notes, reproduction logs, and payloads into structured, professional vulnerability reports.
+- **Live Preview & Direct Editing**: Modify your generated markdown reports in real-time directly inside the interactive preview editor.
+- **One-Click Clipboard Copy**: Copy reports instantly in clean markdown format, ready for direct submission to platforms like HackerOne or Bugcrowd.
+- **Clean PDF Export**: Generate perfectly formatted, print-ready A4 PDF documents of your reports with severity badges and clean monospace code blocks.
+- **Premium Dark UI**: Experience a sleek, dark-themed interface built for comfort during long research sessions.
+- **Interactive Samples**: Fill the form with pre-configured sample notes in a single click to instantly test the report generation flow.
 
-## Instalasi
+## 🚀 Technologies Used
 
-```bash
-# Clone & install dependensi
-git clone https://github.com/username/bugforge.git
-cd bugforge
-npm install
+- **Framework**: Next.js (App Router), React
+- **Styling**: Tailwind CSS
+- **PDF Generation**: `jsPDF`
+- **Type Safety**: TypeScript
 
-# Jalankan server lokal untuk pengembangan
-npm run dev
+## 🛠️ Getting Started
 
-# Build aplikasi untuk tahap produksi
-npm run build
-```
+### Prerequisites
+Make sure you have Node.js and npm (or yarn/pnpm/bun) installed on your machine.
 
-## Environment Variables (.env)
-Karena seluruh pemrosesan dan generator berjalan di sisi klien (*client-side*), tidak diperlukan konfigurasi database eksternal. Anda cukup menggunakan port bawaan Next.js:
-```env
-PORT=3000
-NODE_ENV=development
-```
+### Installation
+
+1. Clone the repository and navigate into the project directory:
+   ```bash
+   git clone https://github.com/liunadirizkyh/bug-forge.git
+   cd bug-forge
+   ```
+
+2. Install the dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application in action.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
+
+## 📝 License
+
+This project is privately owned and developed. All rights reserved.
